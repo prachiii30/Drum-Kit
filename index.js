@@ -3,15 +3,16 @@ document.querySelectorAll(".drum")[i].addEventListener("click",function (){
 // this.style.color="white";
    var innerbutton=this.innerHTML;
    checkey(innerbutton);
-   
+   buttonanimation(innerbutton);
 });
- 
+  
 }
 
   
 document.addEventListener("keypress",function(event){
     // alert("a key was pressed");
     checkey(event.key);
+    buttonanimation(key);
  });
 
  function checkey(key){
@@ -46,11 +47,14 @@ document.addEventListener("keypress",function(event){
              break;
         default:
             alert("Press From the given choice");
-            break;
-    
-             
+            break;   
         } 
+ }
 
+
+
+ function buttonanimation(currentKey){
+     var activebutton=document.querySelector("."+ currentKey);
  }
 
 
